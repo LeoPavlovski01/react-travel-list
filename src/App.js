@@ -24,6 +24,10 @@ export default function App() {
     );
   }
   function handleDeleteItems() {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete the elements?",
+    );
+    if (!confirmed) return;
     setItems([]);
   }
   return (
